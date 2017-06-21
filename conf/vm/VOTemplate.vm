@@ -1,0 +1,29 @@
+## 第一个例子  
+/**
+ * 
+ */
+package $pkgName;
+ 
+public class $className {
+#foreach($field in $fields)
+	
+	private ${field.getType()} ${field.getName()};
+#end
+	
+#foreach($field in $fields)
+	/**
+	 * @return ${field.getType()}
+	 */
+	public ${field.getType()} get${field.getUpperName()}(){
+		return ${field.getName()};
+	}
+
+	/**
+	 * @param ${field.getName()}
+	 */
+	public void set${field.getUpperName()}(${field.getType()} ${field.getName()}){
+		this.${field.getName()} = ${field.getName()};
+	}
+
+#end
+}

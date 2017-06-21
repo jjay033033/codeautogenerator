@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+encoding//conf/vm/VOTemplate.vm=GBK
+encoding//src/cn/tianya/codegenerator/util/VelocityTemplateUtils.java=GBK
+encoding//src/cn/tianya/codegenerator/view/ConnectionUtils.java=GBK
+encoding//src/cn/tianya/codegenerator/view/TableWindow.java=GBK
+encoding/<project>=GBK
