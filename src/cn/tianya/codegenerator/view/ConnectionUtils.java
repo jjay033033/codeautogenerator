@@ -18,7 +18,7 @@ public class ConnectionUtils {
 		
 		Connection conn = null;
 
-		boolean isMysql = dbProps.getProperty("dbType").equalsIgnoreCase("Mysql ˝æ›ø‚");
+		boolean isMysql = dbProps.getProperty("dbType").equalsIgnoreCase("MysqlÊï∞ÊçÆÂ∫ì");
 		
 		String driverClass = null;
 		if(isMysql){

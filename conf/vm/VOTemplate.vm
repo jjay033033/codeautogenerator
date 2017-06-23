@@ -1,24 +1,29 @@
-## µÚÒ»¸öÀı×Ó  
+## ç¬¬ä¸€ä¸ªä¾‹å­  
 /**
  * 
  */
 package $pkgName;
  
 public class $className {
+
 #foreach($field in $fields)
-	
+	/**
+	 * ${field.getDesc()}
+	 */
 	private ${field.getType()} ${field.getName()};
+	
 #end
 	
 #foreach($field in $fields)
 	/**
-	 * @return ${field.getType()}
+	 * @return ${field.getDesc()}
 	 */
 	public ${field.getType()} get${field.getUpperName()}(){
 		return ${field.getName()};
 	}
 
 	/**
+	 * set:${field.getDesc()}
 	 * @param ${field.getName()}
 	 */
 	public void set${field.getUpperName()}(${field.getType()} ${field.getName()}){

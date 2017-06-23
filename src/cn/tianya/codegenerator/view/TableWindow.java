@@ -29,7 +29,9 @@ import java.util.List;
 import java.util.Properties;
 
 import javax.swing.BorderFactory;
+import javax.swing.DefaultCellEditor;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -46,6 +48,7 @@ import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 import javax.swing.WindowConstants;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumnModel;
 
 import cn.tianya.codegenerator.BeanInfo;
 import cn.tianya.codegenerator.db.DbTableVOCodeGenerator;
@@ -84,7 +87,7 @@ public class TableWindow {
 
 	private void initWindow() {
 
-		frame = new JFrame("Êı¾İ¿â±í");
+		frame = new JFrame("æ•°æ®åº“è¡¨");
 
 		JMenuBar menuBar = menuBar();
 		frame.setJMenuBar(menuBar);
@@ -117,33 +120,33 @@ public class TableWindow {
 		JMenuBar menuBar = new JMenuBar();
 		menuBar.setBorder(BorderFactory.createEmptyBorder(3, 2, 5, 2));
 
-		JMenu dsMenu = new JMenu("Êı¾İÔ´");
-		JMenuItem createMenu = new JMenuItem("´´½¨Ô´");
+		JMenu dsMenu = new JMenu("æ•°æ®æº");
+		JMenuItem createMenu = new JMenuItem("åˆ›å»ºæº");
 		createMenu.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N,
 				KeyEvent.CTRL_MASK));
 		createMenu.addActionListener(new createMenuAction());
 		dsMenu.add(createMenu);
 		dsMenu.add(new JSeparator(SwingConstants.HORIZONTAL));
 
-		JMenuItem menuItem = new JMenuItem("´ÓÎÄ¼şµ¼ÈëÔ´");
+		JMenuItem menuItem = new JMenuItem("ä»æ–‡ä»¶å¯¼å…¥æº");
 		menuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_I,
 				KeyEvent.CTRL_MASK));
 		menuItem.addActionListener(new openPropsAction());
 		dsMenu.add(menuItem);
 
-//		JMenuItem menuItem2 = new JMenuItem("Ô´ÎÄ¼şµ¼³ö");
+//		JMenuItem menuItem2 = new JMenuItem("æºæ–‡ä»¶å¯¼å‡º");
 //		menuItem2.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O,
 //				KeyEvent.CTRL_MASK));
 //		dsMenu.add(menuItem2);
 		menuBar.add(dsMenu);
 
-		JMenu voMenu = new JMenu("VOÉú³É");
-		JMenuItem tablesMenu = new JMenuItem("Ñ¡ÔñÊı¾İ¿â±í");
+		JMenu voMenu = new JMenu("VOç”Ÿæˆ");
+		JMenuItem tablesMenu = new JMenuItem("é€‰æ‹©æ•°æ®åº“è¡¨");
 		tablesMenu.addActionListener(new ViewTablesAction());
 		voMenu.add(tablesMenu);
 		menuBar.add(voMenu);
 
-		// menuBar.setHelpMenu(new JMenu("°ïÖú"));
+		// menuBar.setHelpMenu(new JMenu("å¸®åŠ©"));
 
 		return menuBar;
 	}
@@ -194,27 +197,27 @@ public class TableWindow {
 		mgr.setHgap(8);
 		topPanel.setLayout(mgr);
 
-		JLabel typeLabel = new JLabel("Êı¾İ¿âÀàĞÍ");
-		typeComboBox = new JComboBox(new String[] { "MysqlÊı¾İ¿â" });
-		JLabel serverLabel = new JLabel("·şÎñÆ÷Ö÷»ú");
+		JLabel typeLabel = new JLabel("æ•°æ®åº“ç±»å‹");
+		typeComboBox = new JComboBox(new String[] { "Mysqlæ•°æ®åº“" });
+		JLabel serverLabel = new JLabel("æœåŠ¡å™¨ä¸»æœº");
 		serverField = new JTextField("192.169.100.250");
 		topPanel.add(typeLabel);
 		topPanel.add(typeComboBox);
 		topPanel.add(serverLabel);
 		topPanel.add(serverField);
 
-		JLabel dbNameLabel = new JLabel("Êı¾İ¿âÃû³Æ");
+		JLabel dbNameLabel = new JLabel("æ•°æ®åº“åç§°");
 		dbNameField = new JTextField("tianya_");
-		JLabel portLabel = new JLabel("·şÎñÆ÷¶Ë¿Ú");
+		JLabel portLabel = new JLabel("æœåŠ¡å™¨ç«¯å£");
 		portField = new JTextField("3306");
 		topPanel.add(dbNameLabel);
 		topPanel.add(dbNameField);
 		topPanel.add(portLabel);
 		topPanel.add(portField);
 
-		JLabel userNameLabel = new JLabel("ÓÃ»§Ãû");
+		JLabel userNameLabel = new JLabel("ç”¨æˆ·å");
 		userNameField = new JTextField();
-		JLabel passwordLabel = new JLabel("ÃÜÂë");
+		JLabel passwordLabel = new JLabel("å¯†ç ");
 		passwordField = new JTextField();
 		topPanel.add(userNameLabel);
 		topPanel.add(userNameField);
@@ -225,10 +228,10 @@ public class TableWindow {
 		GridLayout mgr2 = new GridLayout(1, 2);
 		mgr2.setHgap(8);
 		footPanel.setLayout(mgr2);
-		JButton testButton = new JButton("²âÊÔÁ¬½Ó");
+		JButton testButton = new JButton("æµ‹è¯•è¿æ¥");
 		testButton.addActionListener(new TestConnectionAction());
 
-		JButton saveButton = new JButton("±£´æÊôĞÔµ½ÎÄ¼ş");
+		JButton saveButton = new JButton("ä¿å­˜å±æ€§åˆ°æ–‡ä»¶");
 		saveButton.addActionListener(new SavePropsAction());
 		footPanel.setSize(300, 50);
 		footPanel.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
@@ -250,10 +253,10 @@ public class TableWindow {
 			try {
 				ConnectionUtils.getConnection(getProperties());
 
-				textArea.append("²âÊÔÁ¬½Ó³É¹¦!\n");
+				textArea.append("æµ‹è¯•è¿æ¥æˆåŠŸ!\n");
 
 			} catch (Exception e1) {
-				textArea.append("²âÊÔÁ¬½ÓÊ§°Ü!\n");
+				textArea.append("æµ‹è¯•è¿æ¥å¤±è´¥!\n");
 				textArea.append(e1.getMessage());
 				textArea.append("\n");
 			}
@@ -299,14 +302,19 @@ public class TableWindow {
 					data[i][0] = i+1;
 					data[i][1] = tables.get(i);
 				}
-				tableModel = new DefaultTableModel(data, new String[] { "Ñ¡Ôñ",
-						"±íÃû" });
+				tableModel = new DefaultTableModel(data, new String[] { "é€‰æ‹©",
+						"è¡¨å" });
 				jTable = new JTable(tableModel);
+				
+				
+//				TableColumnModel tcm = jTable.getColumnModel();
+//				tcm.getColumn(0).setCellEditor(new DefaultCellEditor(new JCheckBox()));
+				
 				// jTable.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 				JScrollPane scrollpane = new JScrollPane(jTable);
 				centerPanel.add(scrollpane, BorderLayout.CENTER);
 
-				JButton testButton = new JButton("Éú³ÉVO");
+				JButton testButton = new JButton("ç”ŸæˆVO");
 				testButton.addActionListener(new createVOAction());
 				JPanel buttonPanel = new JPanel();
 				buttonPanel.setLayout(new GridLayout(1, 1));
@@ -324,7 +332,7 @@ public class TableWindow {
 				frame.setContentPane(contentPanel);
 				frame.setVisible(true);
 			} catch (Exception e1) {
-				textArea.append("Á¬½ÓÊ§°Ü!\n");
+				textArea.append("è¿æ¥å¤±è´¥!\n");
 				textArea.append(e1.getMessage());
 				textArea.append("\n");
 			}
@@ -362,7 +370,7 @@ public class TableWindow {
 				// TODO Auto-generated method stub
 				int[] selectedRows = jTable.getSelectedRows();
 				if(selectedRows.length==0){
-					textArea.append("Ã»ÓĞÑ¡ÖĞÈÎºÎ±í!\n");
+					textArea.append("æ²¡æœ‰é€‰ä¸­ä»»ä½•è¡¨!\n");
 					return;
 				}
 				List<String> list = new ArrayList<String>();
@@ -378,7 +386,7 @@ public class TableWindow {
 				BeanInfo[] beanInfos = codeGenerator.generate(
 						"vo1", list.toArray(a));
 				JavaFileUtils.createJavaFile(null, beanInfos);
-				textArea.append("Éú³ÉVO"+list+"Íê±Ï!\n");
+				textArea.append("ç”ŸæˆVO"+list+"å®Œæ¯•!\n");
 			} catch (Exception e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
@@ -400,27 +408,30 @@ public class TableWindow {
 		@SuppressWarnings("deprecation")
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			// ĞÂ½¨ÎÄ¼ş¶Ô»°¿ò£¬²¢ÉèÖÃÎª´ò¿ªµÄ·½Ê½
-			FileDialog filedlg = new FileDialog(frame, "´ò¿ª");
-			// ÉèÖÃÎÄ¼ş¶Ô»°¿òµÄ±êÌâ
-			filedlg.setTitle("ÎÄ¼şÑ¡Ôñ");
-			filedlg.setFilenameFilter(new FilenameFilter() {
-
-				@Override
-				public boolean accept(File dir, String name) {
-					// TODO Auto-generated method stub
-					return name.endsWith(".properties");
-				}
-			});
-			// ÉèÖÃ³õÊ¼Â·¾¶
-			filedlg.setDirectory("./conf/common/");
+			// æ–°å»ºæ–‡ä»¶å¯¹è¯æ¡†ï¼Œå¹¶è®¾ç½®ä¸ºæ‰“å¼€çš„æ–¹å¼
+			FileDialog filedlg = new FileDialog(frame, "æ‰“å¼€");
+			// è®¾ç½®æ–‡ä»¶å¯¹è¯æ¡†çš„æ ‡é¢˜
+			filedlg.setTitle("æ–‡ä»¶é€‰æ‹©");
+//			filedlg.setFilenameFilter(new FilenameFilter() {
+//
+//				@Override
+//				public boolean accept(File dir, String name) {
+//					// TODO Auto-generated method stub
+//					return name.endsWith(".properties");
+//				}
+//			});
+			filedlg.setFile("*.properties");
+			// è®¾ç½®åˆå§‹è·¯å¾„
+//			filedlg.setDirectory("./conf/common/");
+			filedlg.setDirectory(".\\conf\\common\\");
+			System.out.println(filedlg.getDirectory());
 			filedlg.setVisible(true);
 			// filedlg.setFilterPath("SystemRoot");
-			// ´ò¿ªÎÄ¼ş¶Ô»°¿ò£¬·µ»ØÑ¡ÖĞÎÄ¼şµÄ¾ø¶ÔÂ·¾¶
+			// æ‰“å¼€æ–‡ä»¶å¯¹è¯æ¡†ï¼Œè¿”å›é€‰ä¸­æ–‡ä»¶çš„ç»å¯¹è·¯å¾„
 			String file = filedlg.getFile();
 			if(file==null)return;
 			String selected = filedlg.getDirectory() + file;
-			System.out.println("ÄúÑ¡ÖĞµÄÎÄ¼şÂ·¾¶Îª£º" + selected);
+			System.out.println("æ‚¨é€‰ä¸­çš„æ–‡ä»¶è·¯å¾„ä¸ºï¼š" + selected);
 			initCenterPanel();
 			Properties props = new Properties();
 			try {
@@ -459,10 +470,10 @@ public class TableWindow {
 				bos = new BufferedOutputStream(outputStream);
 				getProperties().store(bos, "");
 
-				textArea.append("±£´æ³É¹¦! ÎÄ¼şÃûÎª" + fileName + "\n");
+				textArea.append("ä¿å­˜æˆåŠŸ! æ–‡ä»¶åä¸º" + fileName + "\n");
 
 			} catch (Exception e1) {
-				textArea.append("±£´æÊ§°Ü!\n");
+				textArea.append("ä¿å­˜å¤±è´¥!\n");
 				textArea.append(e1.getMessage());
 				textArea.append("\n");
 			}finally{

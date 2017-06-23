@@ -22,13 +22,13 @@ public class VelocityTemplateUtils {
 	private static Template template;
 	
 	static {
-		// ÉèÖÃÄ£°å¼ÓÔØÂ·¾¶£¬ÕâÀïÉèÖÃµÄÊÇclassÏÂ
+		// è®¾ç½®æ¨¡æ¿åŠ è½½è·¯å¾„ï¼Œè¿™é‡Œè®¾ç½®çš„æ˜¯classä¸‹
 		ve.setProperty(Velocity.RESOURCE_LOADER, "class");
 		ve.setProperty("class.resource.loader.class",
 				"org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader");
-		// ½øĞĞ³õÊ¼»¯²Ù×÷
+		// è¿›è¡Œåˆå§‹åŒ–æ“ä½œ
 		ve.init();
-		// ¼ÓÔØÄ£°å£¬Éè¶¨Ä£°å±àÂë
+		// åŠ è½½æ¨¡æ¿ï¼Œè®¾å®šæ¨¡æ¿ç¼–ç 
 		template = ve.getTemplate("VOTemplate.vm", "gbk");
 	}
 
@@ -39,17 +39,17 @@ public class VelocityTemplateUtils {
 	public static String createBeanCode(BeanInfo beanInfo) {
 
 		try {
-			// ÉèÖÃ³õÊ¼»¯Êı¾İ
+			// è®¾ç½®åˆå§‹åŒ–æ•°æ®
 			VelocityContext context = new VelocityContext();
 			context.put("pkgName", beanInfo.getPkg());
 			context.put("className", beanInfo.getClassName());
 			context.put("fields", beanInfo.getFields());
 
-			// ÉèÖÃÊä³ö
+			// è®¾ç½®è¾“å‡º
 			StringWriter writer = new StringWriter();
-			// ½«»·¾³Êı¾İ×ª»¯Êä³ö
+			// å°†ç¯å¢ƒæ•°æ®è½¬åŒ–è¾“å‡º
 			template.merge(context, writer);
-			// ¼ò»¯²Ù×÷
+			// ç®€åŒ–æ“ä½œ
 			// ve.mergeTemplate("test/velocity/simple1.vm", "gbk", context,
 			// writer );
 			

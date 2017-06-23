@@ -43,7 +43,7 @@ public class JavaFileUtils {
 	 * @param beanInfo
 	 */
 	private static void createOneFile(String basePath, BeanInfo beanInfo) {
-		//´´½¨java°üµÄÎÄ¼þ¼Ð
+		//åˆ›å»ºjavaåŒ…çš„æ–‡ä»¶å¤¹
 		File fileDir = createPkgFolder(basePath, beanInfo.getPkg());
 		
 		BufferedOutputStream bos = null;

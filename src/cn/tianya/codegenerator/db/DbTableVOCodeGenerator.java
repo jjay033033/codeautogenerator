@@ -21,6 +21,7 @@ import cn.tianya.codegenerator.BeanInfo;
 import cn.tianya.codegenerator.Field;
 import cn.tianya.codegenerator.util.DataTypeUtils;
 import cn.tianya.codegenerator.util.NameUtils;
+import cn.tianya.codegenerator.util.StringUtil;
 import cn.tianya.codegenerator.util.VelocityTemplateUtils;
 
 /**
@@ -57,34 +58,33 @@ public class DbTableVOCodeGenerator {
 	private BeanInfo generateOneBean(String pkgName, String tableName) {
 		BeanInfo beanInfo = new BeanInfo();
 		beanInfo.setPkg(pkgName);
-		beanInfo.setClassName(NameUtils.capitalize(NameUtils
-				.getJavaStyleName(tableName))
-				+ "VO");
+		beanInfo.setClassName(NameUtils.capitalize(NameUtils.getJavaStyleName(tableName)) + "VO");
 
 		ResultSet rs = null;
 
 		try {
 
 			DatabaseMetaData metaData = connection.getMetaData();
-			rs = metaData.getColumns(connection.getCatalog(), null, tableName,
-					null);
+			rs = metaData.getColumns(connection.getCatalog(), null, tableName, null);
 
 			List<Field> fieldList = new ArrayList<Field>();
 			while (rs.next()) {
 
 				String colName = rs.getString("COLUMN_NAME");
 
+				String remarks = rs.getString("REMARKS");
+
 				Field field = new Field();
 				field.setName(NameUtils.getJavaStyleName(colName));
 
+				field.setDesc(StringUtil.isNullOrBlank(remarks) ? "" : remarks);
+
 				field.setUpperName(NameUtils.capitalize(field.getName()));
-				if (field.getName().equals("userId")
-						|| field.getName().indexOf("UserId") > 0) {
-					field.setType("long");
-				} else {
-					field.setType(DataTypeUtils.getDataType(rs
-							.getInt("DATA_TYPE")));
-				}
+//				if (field.getName().equals("userId") || field.getName().indexOf("UserId") > 0) {
+//					field.setType("long");
+//				} else {
+					field.setType(DataTypeUtils.getDataType(rs.getInt("DATA_TYPE")));
+//				}
 
 				fieldList.add(field);
 			}
@@ -109,13 +109,11 @@ public class DbTableVOCodeGenerator {
 
 	public static void main(String[] args) {
 
-		DbTableVOCodeGenerator codeGenerator = new DbTableVOCodeGenerator(
-				getLocalConnection());
+		DbTableVOCodeGenerator codeGenerator = new DbTableVOCodeGenerator(getLocalConnection());
 
 		String[] tabs = new String[] { "mobile_block_invite" };
 
-		System.out.println(codeGenerator.generate(
-				"com.huawei.tw.component.weibo.bean", tabs)[0].getCodeString());
+		System.out.println(codeGenerator.generate("com.huawei.tw.component.weibo.bean", tabs)[0].getCodeString());
 	}
 
 	private static Connection getLocalConnection() {
@@ -133,9 +131,8 @@ public class DbTableVOCodeGenerator {
 
 	private static DataSource getLocalDataSource() {
 		Properties properties = new Properties();
-		InputStream resourceAsStream = Thread.currentThread()
-				.getContextClassLoader().getResourceAsStream(
-						"./dbcp_98.properties");
+		InputStream resourceAsStream = Thread.currentThread().getContextClassLoader()
+				.getResourceAsStream("./dbcp_98.properties");
 		try {
 			properties.load(new BufferedInputStream(resourceAsStream));
 			return BasicDataSourceFactory.createDataSource(properties);
