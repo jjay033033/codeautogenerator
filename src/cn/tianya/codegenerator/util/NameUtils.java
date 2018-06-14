@@ -13,6 +13,8 @@ public class NameUtils {
 	
 	public static String getJavaStyleName(String name){
 		
+		name = name.toLowerCase();
+		
 		if(name == null || name.trim().length() == 0){
 			return name;
 		}

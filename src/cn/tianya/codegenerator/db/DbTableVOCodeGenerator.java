@@ -8,6 +8,7 @@ import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -58,7 +59,7 @@ public class DbTableVOCodeGenerator {
 	private BeanInfo generateOneBean(String pkgName, String tableName) {
 		BeanInfo beanInfo = new BeanInfo();
 		beanInfo.setPkg(pkgName);
-		beanInfo.setClassName(NameUtils.capitalize(NameUtils.getJavaStyleName(tableName)) + "VO");
+		beanInfo.setClassName(NameUtils.capitalize(NameUtils.getJavaStyleName(tableName.toLowerCase())) + "VO");
 
 		ResultSet rs = null;
 
@@ -73,6 +74,14 @@ public class DbTableVOCodeGenerator {
 				String colName = rs.getString("COLUMN_NAME");
 
 				String remarks = rs.getString("REMARKS");
+				
+//				ResultSetMetaData metaData2 = rs.getMetaData();
+//				int columnCount = metaData2.getColumnCount();
+//				for(int i=1;i<=columnCount;i++){
+//					String columnLabel = metaData2.getColumnLabel(i);
+//					System.out.println(columnLabel);
+//					System.out.println(rs.getObject(columnLabel));
+//				}
 
 				Field field = new Field();
 				field.setName(NameUtils.getJavaStyleName(colName));

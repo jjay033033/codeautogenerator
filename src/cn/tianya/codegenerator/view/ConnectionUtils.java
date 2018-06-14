@@ -20,15 +20,21 @@ public class ConnectionUtils {
 
 		boolean isMysql = dbProps.getProperty("dbType").equalsIgnoreCase("Mysql数据库");
 		
+		boolean isOracle = dbProps.getProperty("dbType").equalsIgnoreCase("oracle数据库");
+		
 		String driverClass = null;
 		if(isMysql){
 			driverClass = "com.mysql.jdbc.Driver";
+		}else if(isOracle){
+			driverClass = "oracle.jdbc.driver.OracleDriver";
 		}
 		
 		StringBuffer url = new StringBuffer();
 		if(isMysql){
 			url.append("jdbc:mysql://").append(dbProps.get("host")).append(":").append(dbProps.get("port"))
 				.append("/").append(dbProps.get("dbName")).append("?useUnicode=true&amp;characterEncoding=utf-8");
+		}else if(isOracle){
+			url.append("jdbc:oracle:thin:@").append(dbProps.get("host")).append(":").append(dbProps.get("port")).append(":").append(dbProps.get("dbName"));
 		}
 		
 		try {

@@ -198,7 +198,7 @@ public class TableWindow {
 		topPanel.setLayout(mgr);
 
 		JLabel typeLabel = new JLabel("数据库类型");
-		typeComboBox = new JComboBox(new String[] { "Mysql数据库" });
+		typeComboBox = new JComboBox(new String[] { "Mysql数据库" ,"oracle数据库"});
 		JLabel serverLabel = new JLabel("服务器主机");
 		serverField = new JTextField("192.169.100.250");
 		topPanel.add(typeLabel);
