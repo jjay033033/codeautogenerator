@@ -57,7 +57,7 @@ public class DataTypeUtils {
 		case Types.TIME :
 			return "String";
 		case Types.TIMESTAMP :
-			return "long";
+			return "java.sql.Timestamp";
 		case Types.TINYINT :
 			return "int";
 		case Types.VARBINARY :

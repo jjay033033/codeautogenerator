@@ -29,18 +29,26 @@ public class ConnectionUtils {
 			driverClass = "oracle.jdbc.driver.OracleDriver";
 		}
 		
+		Properties info = new Properties();
 		StringBuffer url = new StringBuffer();
 		if(isMysql){
 			url.append("jdbc:mysql://").append(dbProps.get("host")).append(":").append(dbProps.get("port"))
 				.append("/").append(dbProps.get("dbName")).append("?useUnicode=true&amp;characterEncoding=utf-8");
 		}else if(isOracle){
 			url.append("jdbc:oracle:thin:@").append(dbProps.get("host")).append(":").append(dbProps.get("port")).append(":").append(dbProps.get("dbName"));
+			info.setProperty("remarksReporting","true");
 		}
 		
 		try {
 			Class.forName(driverClass);
-			conn = DriverManager.getConnection(url.toString(),
-					dbProps.getProperty("user"), dbProps.getProperty("password"));
+//			conn = DriverManager.getConnection(url.toString(),
+//					dbProps.getProperty("user"), dbProps.getProperty("password"));
+			
+			
+			info.setProperty("user", dbProps.getProperty("user"));
+			info.setProperty("password", dbProps.getProperty("password"));
+			
+			conn = DriverManager.getConnection(url.toString(), info);
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw e;

@@ -20,6 +20,7 @@ public class VelocityTemplateUtils {
 
 	private static VelocityEngine ve = new VelocityEngine();
 	private static Template template;
+	private static Template mapperTemplate;
 	
 	static {
 		// 设置模板加载路径，这里设置的是class下
@@ -30,6 +31,7 @@ public class VelocityTemplateUtils {
 		ve.init();
 		// 加载模板，设定模板编码
 		template = ve.getTemplate("VOTemplate.vm", "gbk");
+		mapperTemplate = ve.getTemplate("MapperTemplate.vm", "gbk");
 	}
 
 	/**
@@ -49,6 +51,32 @@ public class VelocityTemplateUtils {
 			StringWriter writer = new StringWriter();
 			// 将环境数据转化输出
 			template.merge(context, writer);
+			// 简化操作
+			// ve.mergeTemplate("test/velocity/simple1.vm", "gbk", context,
+			// writer );
+			
+			return writer.toString();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return null;
+	}
+	
+	public static String createMapperBeanCode(BeanInfo beanInfo) {
+
+		try {
+			// 设置初始化数据
+			VelocityContext context = new VelocityContext();
+			context.put("pkgName", beanInfo.getPkg());
+			context.put("className", beanInfo.getClassName());
+			context.put("fields", beanInfo.getFields());
+
+			// 设置输出
+			StringWriter writer = new StringWriter();
+			// 将环境数据转化输出
+			mapperTemplate.merge(context, writer);
 			// 简化操作
 			// ve.mergeTemplate("test/velocity/simple1.vm", "gbk", context,
 			// writer );

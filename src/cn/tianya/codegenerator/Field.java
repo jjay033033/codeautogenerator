@@ -8,7 +8,11 @@ public class Field {
 	
 	private String type;
 	
+	private String jdbcType;
+	
 	private String desc;
+	
+	private String columName;
 
 	public String getName() {
 		return name;
@@ -40,6 +44,22 @@ public class Field {
 
 	public void setDesc(String desc) {
 		this.desc = desc;
+	}
+
+	public String getJdbcType() {
+		return jdbcType;
+	}
+
+	public void setJdbcType(String jdbcType) {
+		this.jdbcType = jdbcType;
+	}
+
+	public String getColumName() {
+		return columName;
+	}
+
+	public void setColumName(String columName) {
+		this.columName = columName;
 	}
 	
 }
