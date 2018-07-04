@@ -18,8 +18,10 @@ import cn.tianya.codegenerator.db.DbTableVOCodeGenerator;
 import cn.tianya.codegenerator.util.JavaFileUtils;
 
 /**
- * @author PTY
  * 
+ * @author gzy
+ * @date 2018年7月4日
+ *
  */
 public class Test {
 
