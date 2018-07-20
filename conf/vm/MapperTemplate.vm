@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.gzyct.api.checkaccount.mapper.${className}Mapper" >
-    <resultMap id="BaseResultMap" type="com.gzyct.api.checkaccount.entity.${className}Entity" >
+<mapper namespace="com.gzyct.api.distribution.mapper.${tableName}Mapper" >
+    <resultMap id="BaseResultMap" type="com.gzyct.api.distribution.entity.${tableName}Entity" >
 	    #foreach($field in $fields)
 			<result column="${field.getColumName()}" property="${field.getName()}" jdbcType="${field.getJdbcType()}" />
 		#end
     </resultMap>
     
     <sql id="Base_Column_List" >
-    	#foreach($field in $fields)${field.getColumName()},#end
+    	#foreach($field in $fields)#if($!{foreach.index}>0),#end${field.getColumName()}#end
+    
     </sql>
 
     <select id="getAll" resultMap="BaseResultMap"  >
        SELECT 
        <include refid="Base_Column_List" />
-	   FROM users
+	   FROM ${tbName}
     </select>
 </mapper>

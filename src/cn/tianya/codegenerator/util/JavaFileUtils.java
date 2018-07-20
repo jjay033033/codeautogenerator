@@ -51,7 +51,7 @@ public class JavaFileUtils {
 		
 		try {
 			OutputStream os = new FileOutputStream(fileDir + "/"
-					+ beanInfo.getClassName() + ".java");
+					+ beanInfo.getClassName() + "."+beanInfo.getFileExt());
 			bos = new BufferedOutputStream(os);
 			
 			Writer writer = new OutputStreamWriter(bos);

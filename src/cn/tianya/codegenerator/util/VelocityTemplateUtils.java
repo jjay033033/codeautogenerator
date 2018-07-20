@@ -72,6 +72,8 @@ public class VelocityTemplateUtils {
 			context.put("pkgName", beanInfo.getPkg());
 			context.put("className", beanInfo.getClassName());
 			context.put("fields", beanInfo.getFields());
+			context.put("tableName", beanInfo.getTableName());
+			context.put("tbName", beanInfo.getTbName());
 
 			// 设置输出
 			StringWriter writer = new StringWriter();

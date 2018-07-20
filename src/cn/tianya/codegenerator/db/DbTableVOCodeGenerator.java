@@ -61,7 +61,8 @@ public class DbTableVOCodeGenerator {
 	private BeanInfo generateOneBean(String pkgName, String tableName) {
 		BeanInfo beanInfo = new BeanInfo();
 		beanInfo.setPkg(pkgName);
-		beanInfo.setClassName(NameUtils.capitalize(NameUtils.getJavaStyleName(tableName.toLowerCase())) + "VO");
+		beanInfo.setClassName(NameUtils.capitalize(NameUtils.getJavaStyleName(tableName.toLowerCase())) + "Entity");
+		beanInfo.setFileExt("java");
 
 		ResultSet rs = null;
 
@@ -121,7 +122,12 @@ public class DbTableVOCodeGenerator {
 	private BeanInfo generateOneMapperBean(String pkgName, String tableName) {
 		BeanInfo beanInfo = new BeanInfo();
 		beanInfo.setPkg(pkgName);
-		beanInfo.setClassName(NameUtils.capitalize(NameUtils.getJavaStyleName(tableName.toLowerCase())) + "Mapper");
+		String capitalize = NameUtils.capitalize(NameUtils.getJavaStyleName(tableName.toLowerCase()));
+		
+		beanInfo.setTableName(capitalize);
+		beanInfo.setTbName(tableName.toUpperCase());
+		beanInfo.setClassName(capitalize + "Mapper");
+		beanInfo.setFileExt("xml");
 
 		ResultSet rs = null;
 
