@@ -53,6 +53,7 @@ import javax.swing.table.TableColumnModel;
 import cn.tianya.codegenerator.BeanInfo;
 import cn.tianya.codegenerator.db.DbTableVOCodeGenerator;
 import cn.tianya.codegenerator.util.DbUtil;
+import cn.tianya.codegenerator.util.DbUtil.DbType;
 import cn.tianya.codegenerator.util.JavaFileUtils;
 
 /**
@@ -294,8 +295,15 @@ public class TableWindow {
 				centerPanel.setLayout(new BorderLayout());
 				Properties props = getProperties();
 				Connection conn = ConnectionUtils.getConnection(props);
-				List<String> tables = DbUtil.getTables(conn,
-						props.getProperty("user"), props.getProperty("dbName"));
+				DbType dbType = DbType.MYSQL;//默认mysql
+				String dbTypeStr = props.getProperty("dbType");
+				if("Mysql数据库".equals(dbTypeStr)){
+					dbType = DbType.MYSQL;
+				}else if("oracle数据库".equals(dbTypeStr)){
+					dbType = DbType.ORACLE;
+				}
+				List<String> tables = DbUtil.getTablesNew(conn,
+						props.getProperty("user"), props.getProperty("dbName"),dbType);
 				Object[][] data = new Object[tables.size()][2];
 				System.out.println(tables);
 				for (int i = 0; i < tables.size(); i++) {
