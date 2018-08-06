@@ -73,10 +73,10 @@ public class DbUtil {
 		try {
 			switch (dbtype) {
 			case MYSQL:
-				sql = "SELECT t.table_name AS name FROM information_schema.`TABLES` t WHERE t.TABLE_SCHEMA = (select database())";
+				sql = "SELECT t.table_name AS name FROM information_schema.`TABLES` t WHERE t.TABLE_SCHEMA = (select database()) order by t.table_name";
 				break;
 			case ORACLE:
-				sql = "SELECT TABLE_NAME AS name FROM user_tables";
+				sql = "SELECT TABLE_NAME AS name FROM user_tables order by TABLE_NAME";
 				break;
 			default:
 				return getTables(conn, user, database);
