@@ -464,7 +464,7 @@ public class TableWindow {
 			if (!dir.exists()) {
 				dir.mkdirs();
 			}
-			String fileName = basePath + "db_" + dbNameField.getText()
+			String fileName = basePath + "db_"+serverField.getText()+"_" + dbNameField.getText()
 					+ ".properties";
 
 			OutputStream outputStream = null;
