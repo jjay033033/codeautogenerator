@@ -22,7 +22,7 @@
 		INSERT INTO
 		${tbName} (#foreach($field in $fields)#if($!{foreach.index}>0),#end${field.getColumName()}#end)
 		VALUES
-		(#foreach($field in $fields)#if($!{foreach.index}>0),#end#{${field.getName()}}#end)
+		(#foreach($field in $fields)#if($!{foreach.index}>0),#end#{${field.getName()},jdbcType=${field.getJdbcType()}}#end)
 	</insert>
 	
 </mapper>
