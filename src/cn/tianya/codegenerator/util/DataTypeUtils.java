@@ -35,7 +35,7 @@ public class DataTypeUtils {
 		case Types.DATE :
 			return "String";
 		case Types.DECIMAL :
-			return "double";
+			return "long";
 		case Types.DOUBLE :
 			return "double";
 		case Types.FLOAT :
@@ -51,7 +51,7 @@ public class DataTypeUtils {
 		case Types.NULL :
 			return "Object";
 		case Types.NUMERIC :
-			return "double";
+			return "long";
 		case Types.SMALLINT :
 			return "int";
 		case Types.TIME :

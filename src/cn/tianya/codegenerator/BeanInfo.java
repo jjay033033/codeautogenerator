@@ -13,6 +13,10 @@ public class BeanInfo {
 	
 	private String pkg;
 	
+	private String mapperPkg;
+	
+	private String entityPkg;
+	
 	private String tableName;
 	
 	private String tbName;
@@ -59,8 +63,9 @@ public class BeanInfo {
 
 	@Override
 	public String toString() {
-		return "BeanInfo [pkg=" + pkg + ", tableName=" + tableName + ", tbName=" + tbName + ", className=" + className
-				+ ", fields=" + Arrays.toString(fields) + ", codeString=" + codeString + ", fileExt=" + fileExt + "]";
+		return "BeanInfo [pkg=" + pkg + ", mapperPkg=" + mapperPkg + ", entityPkg=" + entityPkg + ", tableName="
+				+ tableName + ", tbName=" + tbName + ", className=" + className + ", fields=" + Arrays.toString(fields)
+				+ ", codeString=" + codeString + ", fileExt=" + fileExt + "]";
 	}
 
 	public String getTableName() {
@@ -85,6 +90,22 @@ public class BeanInfo {
 
 	public void setFileExt(String fileExt) {
 		this.fileExt = fileExt;
+	}
+
+	public String getMapperPkg() {
+		return mapperPkg;
+	}
+
+	public void setMapperPkg(String mapperPkg) {
+		this.mapperPkg = mapperPkg;
+	}
+
+	public String getEntityPkg() {
+		return entityPkg;
+	}
+
+	public void setEntityPkg(String entityPkg) {
+		this.entityPkg = entityPkg;
 	}
 
 }

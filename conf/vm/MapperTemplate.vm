@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.gzyct.api.distribution.mapper.${tableName}Mapper" >
-    <resultMap id="BaseResultMap" type="com.gzyct.api.distribution.entity.${tableName}Entity" >
+<mapper namespace="${mapperPkg}.${tableName}Mapper" >
+    <resultMap id="BaseResultMap" type="${entityPkg}.${tableName}Entity" >
 	    #foreach($field in $fields)
 			<result column="${field.getColumName()}" property="${field.getName()}" jdbcType="${field.getJdbcType()}" />
 		#end

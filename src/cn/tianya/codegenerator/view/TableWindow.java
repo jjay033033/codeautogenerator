@@ -388,7 +388,7 @@ public class TableWindow {
 						conn);
 				String[] a = new String[]{};
 				BeanInfo[] beanInfos = codeGenerator.generate(
-						"vo1", list.toArray(a));
+						"com.gzyct.api.studata", list.toArray(a));
 				JavaFileUtils.createJavaFile(null, beanInfos);
 				textArea.append("生成VO"+list+"完毕!\n");
 			} catch (Exception e1) {

@@ -44,11 +44,12 @@ public class DbTableVOCodeGenerator {
 	public BeanInfo[] generate(String pkgName, String... tableNames) {
 
 		BeanInfo[] beanInfos = new BeanInfo[tableNames.length*2];
-
+		String mapperPkgName = pkgName+".dao";
+		String entityPkgName = pkgName+".entity";
 		int indexCount = 0;
 		for (String tableName : tableNames) {
-			beanInfos[indexCount++] = generateOneBean(pkgName, tableName);
-			beanInfos[indexCount++] = generateOneMapperBean(pkgName, tableName);
+			beanInfos[indexCount++] = generateOneBean(entityPkgName, tableName);
+			beanInfos[indexCount++] = generateOneMapperBean(entityPkgName,mapperPkgName, tableName);
 		}
 
 		return beanInfos;
@@ -119,15 +120,17 @@ public class DbTableVOCodeGenerator {
 		return beanInfo;
 	}
 	
-	private BeanInfo generateOneMapperBean(String pkgName, String tableName) {
+	private BeanInfo generateOneMapperBean(String entityPkgName,String mapperPkgName, String tableName) {
 		BeanInfo beanInfo = new BeanInfo();
-		beanInfo.setPkg(pkgName);
+		beanInfo.setPkg(mapperPkgName);
 		String capitalize = NameUtils.capitalize(NameUtils.getJavaStyleName(tableName.toLowerCase()));
 		
 		beanInfo.setTableName(capitalize);
 		beanInfo.setTbName(tableName.toUpperCase());
 		beanInfo.setClassName(capitalize + "Mapper");
 		beanInfo.setFileExt("xml");
+		beanInfo.setEntityPkg(entityPkgName);
+		beanInfo.setMapperPkg(mapperPkgName);
 
 		ResultSet rs = null;
 
