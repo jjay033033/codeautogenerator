@@ -1,0 +1,22 @@
+## 第一个例子  
+/**
+ * 
+ */
+package $pkgName;
+
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+ 
+@Data
+@TableName("${tbName}")
+public class $className {
+
+#foreach($field in $fields)
+	/**
+	 * ${field.getDesc()}
+	 */
+	private ${field.getType()} ${field.getName()};
+	
+#end
+
+}

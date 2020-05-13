@@ -43,13 +43,15 @@ public class DbTableVOCodeGenerator {
 	 */
 	public BeanInfo[] generate(String pkgName, String... tableNames) {
 
-		BeanInfo[] beanInfos = new BeanInfo[tableNames.length*2];
+		BeanInfo[] beanInfos = new BeanInfo[tableNames.length*3];
 		String mapperPkgName = pkgName+".dao";
 		String entityPkgName = pkgName+".entity";
 		int indexCount = 0;
 		for (String tableName : tableNames) {
-			beanInfos[indexCount++] = generateOneBean(entityPkgName, tableName);
+//			beanInfos[indexCount++] = generateOneBean(entityPkgName, tableName);
 			beanInfos[indexCount++] = generateOneMapperBean(entityPkgName,mapperPkgName, tableName);
+			beanInfos[indexCount++] = generateOneVoForMbp(entityPkgName, tableName);
+			beanInfos[indexCount++] = generateOneMapperClassForMbp(entityPkgName,mapperPkgName, tableName);
 		}
 
 		return beanInfos;
@@ -65,14 +67,129 @@ public class DbTableVOCodeGenerator {
 		beanInfo.setClassName(NameUtils.capitalize(NameUtils.getJavaStyleName(tableName.toLowerCase())) + "Entity");
 		beanInfo.setFileExt("java");
 
-		ResultSet rs = null;
+		Field[] fields = getList(tableName);
+		
+		beanInfo.setFields(fields);
 
+		String codeString = VelocityTemplateUtils.createBeanCode(beanInfo);
+		beanInfo.setCodeString(codeString);
+		return beanInfo;
+	}
+	
+	private BeanInfo generateOneVoForMbp(String pkgName, String tableName) {
+		BeanInfo beanInfo = new BeanInfo();
+		beanInfo.setPkg(pkgName);
+		beanInfo.setClassName(NameUtils.capitalize(NameUtils.getJavaStyleName(tableName.toLowerCase())) + "Entity");
+		beanInfo.setFileExt("java");
+		
+		beanInfo.setTbName(tableName.toUpperCase());
+
+		Field[] fields = getList(tableName);
+		
+		beanInfo.setFields(fields);
+
+		String codeString = VelocityTemplateUtils.createVoForMbpCode(beanInfo);
+		beanInfo.setCodeString(codeString);
+		return beanInfo;
+	}
+	
+	private BeanInfo generateOneMapperClassForMbp(String entityPkgName,String mapperPkgName, String tableName) {
+		BeanInfo beanInfo = new BeanInfo();
+		beanInfo.setPkg(mapperPkgName);
+		String capitalize = NameUtils.capitalize(NameUtils.getJavaStyleName(tableName.toLowerCase()));
+		
+		beanInfo.setTableName(capitalize);
+		beanInfo.setTbName(tableName.toUpperCase());
+		beanInfo.setClassName(capitalize + "Mapper");
+		beanInfo.setFileExt("java");
+		beanInfo.setEntityPkg(entityPkgName);
+
+		Field[] fields = getList(tableName);
+		
+		beanInfo.setFields(fields);
+
+		String codeString = VelocityTemplateUtils.createMapperForMbpCode(beanInfo);
+		beanInfo.setCodeString(codeString);
+
+		return beanInfo;
+	}
+
+	
+	
+	private BeanInfo generateOneMapperBean(String entityPkgName,String mapperPkgName, String tableName) {
+		BeanInfo beanInfo = new BeanInfo();
+		beanInfo.setPkg(mapperPkgName);
+		String capitalize = NameUtils.capitalize(NameUtils.getJavaStyleName(tableName.toLowerCase()));
+		
+		beanInfo.setTableName(capitalize);
+		beanInfo.setTbName(tableName.toUpperCase());
+		beanInfo.setClassName(capitalize + "Mapper");
+		beanInfo.setFileExt("xml");
+		beanInfo.setEntityPkg(entityPkgName);
+		beanInfo.setMapperPkg(mapperPkgName);
+
+//		ResultSet rs = null;
+//
+//		try {
+//
+//			DatabaseMetaData metaData = connection.getMetaData();
+//			rs = metaData.getColumns(connection.getCatalog(), null, tableName, null);
+//
+//			List<Field> fieldList = new ArrayList<Field>();
+//			while (rs.next()) {
+//
+//				String colName = rs.getString("COLUMN_NAME");
+//
+//				String remarks = rs.getString("REMARKS");
+//
+//
+//				Field field = new Field();
+//				field.setName(NameUtils.getJavaStyleName(colName));
+//
+//				field.setDesc(StringUtil.isNullOrBlank(remarks) ? "" : remarks);
+//
+//				field.setUpperName(NameUtils.capitalize(field.getName()));
+//				int dataType = rs.getInt("DATA_TYPE");
+//				field.setType(DataTypeUtils.getDataType(dataType));
+//				field.setJdbcType(JDBCType.valueOf(dataType).getName());
+//				field.setColumName(colName);
+//				fieldList.add(field);
+//			}
+//
+//			Field[] fields = new Field[fieldList.size()];
+//			beanInfo.setFields(fieldList.toArray(fields));
+//
+//			String codeString = VelocityTemplateUtils.createMapperBeanCode(beanInfo);
+//			beanInfo.setCodeString(codeString);
+//
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		} finally {
+//			try {
+//				rs.close();
+//			} catch (Exception e2) {
+//			}
+//		}
+		
+		Field[] fields = getList(tableName);
+		
+		beanInfo.setFields(fields);
+
+		String codeString = VelocityTemplateUtils.createMapperBeanCode(beanInfo);
+		beanInfo.setCodeString(codeString);
+
+		return beanInfo;
+	}
+	
+	private Field[] getList(String tableName) {
+		List<Field> fieldList = new ArrayList<Field>();
+		ResultSet rs = null;
 		try {
 
 			DatabaseMetaData metaData = connection.getMetaData();
 			rs = metaData.getColumns(connection.getCatalog(), null, tableName, null);
 
-			List<Field> fieldList = new ArrayList<Field>();
+			
 			while (rs.next()) {
 
 				String colName = rs.getString("COLUMN_NAME");
@@ -102,11 +219,7 @@ public class DbTableVOCodeGenerator {
 				fieldList.add(field);
 			}
 
-			Field[] fields = new Field[fieldList.size()];
-			beanInfo.setFields(fieldList.toArray(fields));
-
-			String codeString = VelocityTemplateUtils.createBeanCode(beanInfo);
-			beanInfo.setCodeString(codeString);
+			
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -116,77 +229,9 @@ public class DbTableVOCodeGenerator {
 			} catch (Exception e2) {
 			}
 		}
-
-		return beanInfo;
-	}
-	
-	private BeanInfo generateOneMapperBean(String entityPkgName,String mapperPkgName, String tableName) {
-		BeanInfo beanInfo = new BeanInfo();
-		beanInfo.setPkg(mapperPkgName);
-		String capitalize = NameUtils.capitalize(NameUtils.getJavaStyleName(tableName.toLowerCase()));
 		
-		beanInfo.setTableName(capitalize);
-		beanInfo.setTbName(tableName.toUpperCase());
-		beanInfo.setClassName(capitalize + "Mapper");
-		beanInfo.setFileExt("xml");
-		beanInfo.setEntityPkg(entityPkgName);
-		beanInfo.setMapperPkg(mapperPkgName);
-
-		ResultSet rs = null;
-
-		try {
-
-			DatabaseMetaData metaData = connection.getMetaData();
-			rs = metaData.getColumns(connection.getCatalog(), null, tableName, null);
-
-			List<Field> fieldList = new ArrayList<Field>();
-			while (rs.next()) {
-
-				String colName = rs.getString("COLUMN_NAME");
-
-				String remarks = rs.getString("REMARKS");
-				
-//				ResultSetMetaData metaData2 = rs.getMetaData();
-//				int columnCount = metaData2.getColumnCount();
-//				for(int i=1;i<=columnCount;i++){
-//					String columnLabel = metaData2.getColumnLabel(i);
-//					System.out.println(columnLabel);
-//					System.out.println(rs.getObject(columnLabel));
-//				}
-
-				Field field = new Field();
-				field.setName(NameUtils.getJavaStyleName(colName));
-
-				field.setDesc(StringUtil.isNullOrBlank(remarks) ? "" : remarks);
-
-				field.setUpperName(NameUtils.capitalize(field.getName()));
-//				if (field.getName().equals("userId") || field.getName().indexOf("UserId") > 0) {
-//					field.setType("long");
-//				} else {
-					int dataType = rs.getInt("DATA_TYPE");
-					field.setType(DataTypeUtils.getDataType(dataType));
-//				}
-				field.setJdbcType(JDBCType.valueOf(dataType).getName());
-				field.setColumName(colName);
-				fieldList.add(field);
-			}
-
-			Field[] fields = new Field[fieldList.size()];
-			beanInfo.setFields(fieldList.toArray(fields));
-
-			String codeString = VelocityTemplateUtils.createMapperBeanCode(beanInfo);
-			beanInfo.setCodeString(codeString);
-
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				rs.close();
-			} catch (Exception e2) {
-			}
-		}
-
-		return beanInfo;
+		Field[] fields = fieldList.toArray(new Field[fieldList.size()]);
+		return fields;
 	}
 
 	public static void main(String[] args) {
