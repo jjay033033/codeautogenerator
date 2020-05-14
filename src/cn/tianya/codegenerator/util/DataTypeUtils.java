@@ -17,15 +17,15 @@ public class DataTypeUtils {
 		case Types.ARRAY :
 			return "Object[]";
 		case Types.BIGINT :
-			return "long";
+			return "Long";
 		case Types.BINARY :
 			return "java.sql.Blob";
 		case Types.BIT :
-			return "int";
+			return "Integer";
 		case Types.BLOB :
 			return "java.sql.Blob";
 		case Types.BOOLEAN :
-			return "boolean";
+			return "Boolean";
 		case Types.CHAR :
 			return "String";
 		case Types.CLOB :
@@ -35,13 +35,13 @@ public class DataTypeUtils {
 		case Types.DATE :
 			return "String";
 		case Types.DECIMAL :
-			return "long";
+			return "Long";
 		case Types.DOUBLE :
-			return "double";
+			return "Double";
 		case Types.FLOAT :
-			return "float";
+			return "Float";
 		case Types.INTEGER :
-			return "int";
+			return "Integer";
 		case Types.JAVA_OBJECT :
 			return "java.sql.Blob";
 		case Types.LONGVARBINARY :
@@ -51,15 +51,15 @@ public class DataTypeUtils {
 		case Types.NULL :
 			return "Object";
 		case Types.NUMERIC :
-			return "long";
+			return "Long";
 		case Types.SMALLINT :
-			return "int";
+			return "Integer";
 		case Types.TIME :
 			return "String";
 		case Types.TIMESTAMP :
 			return "java.sql.Timestamp";
 		case Types.TINYINT :
-			return "int";
+			return "Integer";
 		case Types.VARBINARY :
 			return "java.sql.Blob";
 		case Types.VARCHAR :
