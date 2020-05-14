@@ -1,361 +1,48 @@
-2020-03-10 17:30:41,994 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2020-03-10 17:30:41,994 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2020-03-10 17:30:41,994 - Velocimacro : Default library not found.
-2020-03-10 17:30:41,994 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2020-03-10 17:30:41,994 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2020-03-10 17:30:41,994 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2020-03-10 17:30:41,995 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2020-03-10 17:30:42,004 - ResourceManager : found VOTemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2020-03-10 17:30:42,007 - ResourceManager : found MapperTemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2020-03-13 15:12:29,254 - Log4JLogChute initialized using file 'velocity.log'
-2020-03-13 15:12:29,268 - Initializing Velocity, Calling init()...
-2020-03-13 15:12:29,268 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2020-03-13 15:12:29,268 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
-2020-03-13 15:12:29,268 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2020-03-13 15:12:29,268 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2020-03-13 15:12:29,268 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2020-03-13 15:12:29,268 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2020-03-13 15:12:29,270 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2020-03-13 15:12:29,368 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2020-03-13 15:12:29,368 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2020-03-13 15:12:29,369 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2020-03-13 15:12:29,370 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2020-03-13 15:12:29,370 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2020-03-13 15:12:29,370 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2020-03-13 15:12:29,371 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2020-03-13 15:12:29,371 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2020-03-13 15:12:29,372 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2020-03-13 15:12:29,373 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2020-03-13 15:12:29,390 - Created '20' parsers.
-2020-03-13 15:12:29,395 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2020-03-13 15:12:29,395 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2020-03-13 15:12:29,395 - Velocimacro : Default library not found.
-2020-03-13 15:12:29,395 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2020-03-13 15:12:29,395 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2020-03-13 15:12:29,395 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2020-03-13 15:12:29,395 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2020-03-13 15:12:29,405 - ResourceManager : found VOTemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2020-03-13 15:12:29,421 - ResourceManager : found MapperTemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2020-03-17 10:07:37,914 - Log4JLogChute initialized using file 'velocity.log'
-2020-03-17 10:07:37,929 - Initializing Velocity, Calling init()...
-2020-03-17 10:07:37,929 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2020-03-17 10:07:37,929 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
-2020-03-17 10:07:37,929 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2020-03-17 10:07:37,929 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2020-03-17 10:07:37,929 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2020-03-17 10:07:37,929 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2020-03-17 10:07:37,932 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2020-03-17 10:07:38,019 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2020-03-17 10:07:38,020 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2020-03-17 10:07:38,020 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2020-03-17 10:07:38,021 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2020-03-17 10:07:38,021 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2020-03-17 10:07:38,021 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2020-03-17 10:07:38,022 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2020-03-17 10:07:38,022 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2020-03-17 10:07:38,023 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2020-03-17 10:07:38,024 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2020-03-17 10:07:38,040 - Created '20' parsers.
-2020-03-17 10:07:38,043 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2020-03-17 10:07:38,043 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2020-03-17 10:07:38,043 - Velocimacro : Default library not found.
-2020-03-17 10:07:38,044 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2020-03-17 10:07:38,044 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2020-03-17 10:07:38,044 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2020-03-17 10:07:38,044 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2020-03-17 10:07:38,052 - ResourceManager : found VOTemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2020-03-17 10:07:38,064 - ResourceManager : found MapperTemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2020-05-13 17:33:07,538 - Log4JLogChute initialized using file 'velocity.log'
-2020-05-13 17:33:07,538 - Initializing Velocity, Calling init()...
-2020-05-13 17:33:07,538 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2020-05-13 17:33:07,538 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
-2020-05-13 17:33:07,538 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2020-05-13 17:33:07,538 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2020-05-13 17:33:07,538 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2020-05-13 17:33:07,538 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2020-05-13 17:33:07,540 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2020-05-13 17:33:07,547 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2020-05-13 17:33:07,547 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2020-05-13 17:33:07,548 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2020-05-13 17:33:07,549 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2020-05-13 17:33:07,549 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2020-05-13 17:33:07,550 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2020-05-13 17:33:07,550 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2020-05-13 17:33:07,551 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2020-05-13 17:33:07,552 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2020-05-13 17:33:07,553 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2020-05-13 17:33:07,570 - Created '20' parsers.
-2020-05-13 17:33:07,573 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2020-05-13 17:33:07,573 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2020-05-13 17:33:07,573 - Velocimacro : Default library not found.
-2020-05-13 17:33:07,573 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2020-05-13 17:33:07,573 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2020-05-13 17:33:07,573 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2020-05-13 17:33:07,573 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2020-05-13 17:33:07,583 - ResourceManager : found VOTemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2020-05-13 17:33:07,585 - ResourceManager : found MapperTemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2020-05-13 17:33:07,586 - ResourceManager : found VOForMybatisPlusTemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2020-05-13 17:33:07,586 - ResourceManager : found MapperClassForMybatisPlusTemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2020-05-13 17:33:08,588 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:08,588 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:08,588 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:08,588 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:08,588 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:08,588 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:08,589 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:08,589 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:08,589 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:08,589 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:08,589 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:08,589 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:08,589 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:08,589 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:08,589 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:08,589 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:08,589 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:08,589 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:08,589 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:08,589 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:08,591 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:08,591 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:08,591 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:08,591 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:08,592 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:08,592 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:08,592 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:08,592 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:08,592 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:08,592 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:08,592 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:08,592 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:08,592 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:08,592 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:08,592 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:08,593 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:08,593 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:08,593 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:08,593 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:08,593 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:08,593 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:08,593 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:08,593 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:08,593 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:08,593 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:08,594 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:08,594 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:08,594 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:08,594 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:08,594 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:10,681 - Null reference [template 'MapperTemplate.vm', line 3, column 20] : ${mapperPkg} cannot be resolved.
-2020-05-13 17:33:10,681 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:10,681 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:10,681 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:10,681 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:10,681 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:10,681 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:10,681 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:10,681 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:10,681 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:10,681 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:10,681 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:10,681 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:10,681 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:10,681 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:10,681 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:10,681 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:10,681 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:10,681 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:10,681 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:10,681 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:10,681 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:10,681 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:10,682 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:10,682 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:10,682 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:10,682 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:10,682 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:10,682 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:10,682 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:10,682 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:10,682 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:10,682 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:10,682 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:10,682 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:10,682 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:10,682 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:10,682 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:10,682 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:10,682 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:10,682 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:33:10,682 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:10,682 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:10,682 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:10,682 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:10,682 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:10,682 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:10,683 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:10,683 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:10,683 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:33:10,683 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:39:31,531 - Log4JLogChute initialized using file 'velocity.log'
-2020-05-13 17:39:31,531 - Initializing Velocity, Calling init()...
-2020-05-13 17:39:31,531 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2020-05-13 17:39:31,531 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
-2020-05-13 17:39:31,532 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2020-05-13 17:39:31,532 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2020-05-13 17:39:31,532 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2020-05-13 17:39:31,532 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2020-05-13 17:39:31,535 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2020-05-13 17:39:31,544 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2020-05-13 17:39:31,545 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2020-05-13 17:39:31,545 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2020-05-13 17:39:31,546 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2020-05-13 17:39:31,546 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2020-05-13 17:39:31,547 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2020-05-13 17:39:31,548 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2020-05-13 17:39:31,548 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2020-05-13 17:39:31,549 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2020-05-13 17:39:31,550 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2020-05-13 17:39:31,601 - Created '20' parsers.
-2020-05-13 17:39:31,604 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2020-05-13 17:39:31,604 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2020-05-13 17:39:31,604 - Velocimacro : Default library not found.
-2020-05-13 17:39:31,604 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2020-05-13 17:39:31,604 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2020-05-13 17:39:31,604 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2020-05-13 17:39:31,605 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2020-05-13 17:39:31,614 - ResourceManager : found VOTemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2020-05-13 17:39:31,616 - ResourceManager : found MapperTemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2020-05-13 17:39:31,618 - ResourceManager : found VOForMybatisPlusTemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2020-05-13 17:39:31,619 - ResourceManager : found MapperClassForMybatisPlusTemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2020-05-13 17:39:42,326 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:39:42,326 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:39:42,326 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:39:42,326 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:39:42,326 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:39:42,326 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:39:42,326 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:39:42,326 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:39:42,326 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:39:42,326 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:39:42,326 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:39:42,326 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:39:42,326 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:39:42,326 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:39:42,326 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:39:42,327 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:39:42,327 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:39:42,327 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:39:42,327 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:39:42,327 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:39:42,329 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:39:42,329 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:39:42,329 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:39:42,329 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:39:42,329 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:39:42,331 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:39:42,331 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:39:42,331 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:39:42,331 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:39:42,331 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:39:42,331 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:39:42,331 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:39:42,331 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:39:42,332 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:39:42,332 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:39:42,332 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:39:42,332 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:39:42,332 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:39:42,332 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:39:42,332 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:39:42,332 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:39:42,332 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:39:42,332 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:39:42,332 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:39:42,332 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:39:42,333 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:39:42,333 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:39:42,333 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:39:42,333 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:39:42,333 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:45:26,374 - Log4JLogChute initialized using file 'velocity.log'
-2020-05-13 17:45:26,375 - Initializing Velocity, Calling init()...
-2020-05-13 17:45:26,375 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2020-05-13 17:45:26,375 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
-2020-05-13 17:45:26,375 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2020-05-13 17:45:26,375 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2020-05-13 17:45:26,375 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2020-05-13 17:45:26,375 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2020-05-13 17:45:26,377 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2020-05-13 17:45:26,387 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2020-05-13 17:45:26,388 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2020-05-13 17:45:26,388 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2020-05-13 17:45:26,389 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2020-05-13 17:45:26,389 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2020-05-13 17:45:26,390 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2020-05-13 17:45:26,390 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2020-05-13 17:45:26,391 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2020-05-13 17:45:26,392 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2020-05-13 17:45:26,392 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2020-05-13 17:45:26,444 - Created '20' parsers.
-2020-05-13 17:45:26,447 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2020-05-13 17:45:26,447 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2020-05-13 17:45:26,447 - Velocimacro : Default library not found.
-2020-05-13 17:45:26,447 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2020-05-13 17:45:26,447 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2020-05-13 17:45:26,447 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2020-05-13 17:45:26,447 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2020-05-13 17:45:26,457 - ResourceManager : found VOTemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2020-05-13 17:45:26,460 - ResourceManager : found MapperTemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2020-05-13 17:45:26,460 - ResourceManager : found VOForMybatisPlusTemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2020-05-13 17:45:26,461 - ResourceManager : found MapperClassForMybatisPlusTemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2020-05-13 17:45:26,468 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:45:26,468 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:45:26,468 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:45:26,468 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:45:26,468 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:45:26,468 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:45:26,468 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:45:26,468 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:45:26,468 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:45:26,468 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:45:26,468 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:45:26,468 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:45:26,468 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:45:26,468 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:45:26,468 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:45:26,469 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:45:26,469 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:45:26,469 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:45:26,469 - Null reference [template 'MapperTemplate.vm', line 6, column 41] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:45:26,469 - Null reference [template 'MapperTemplate.vm', line 6, column 106] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:45:26,471 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:45:26,471 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:45:26,471 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:45:26,471 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:45:26,471 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:45:26,471 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:45:26,472 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:45:26,472 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:45:26,472 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:45:26,472 - Null reference [template 'MapperTemplate.vm', line 11, column 65] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:45:26,472 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:45:26,472 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:45:26,472 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:45:26,472 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:45:26,472 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:45:26,472 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:45:26,473 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:45:26,473 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:45:26,473 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:45:26,473 - Null reference [template 'MapperTemplate.vm', line 23, column 84] : ${field.getColumName()} cannot be resolved.
-2020-05-13 17:45:26,473 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:45:26,473 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:45:26,473 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:45:26,473 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:45:26,473 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:45:26,474 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:45:26,474 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:45:26,474 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:45:26,474 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
-2020-05-13 17:45:26,474 - Null reference [template 'MapperTemplate.vm', line 25, column 104] : ${field.getJdbcType()} cannot be resolved.
+2020-05-14 09:48:14,854 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2020-05-14 09:48:14,856 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2020-05-14 09:48:14,857 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2020-05-14 09:48:14,858 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2020-05-14 09:48:14,859 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2020-05-14 09:48:14,881 - Created '20' parsers.
+2020-05-14 09:48:14,886 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2020-05-14 09:48:14,886 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2020-05-14 09:48:14,886 - Velocimacro : Default library not found.
+2020-05-14 09:48:14,886 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2020-05-14 09:48:14,887 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2020-05-14 09:48:14,887 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2020-05-14 09:48:14,887 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2020-05-14 09:48:14,902 - ResourceManager : found VOTemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-14 09:48:14,907 - ResourceManager : found MapperTemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-14 09:48:14,908 - ResourceManager : found VOForMybatisPlusTemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-14 09:48:14,909 - ResourceManager : found MapperClassForMybatisPlusTemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-14 09:49:36,090 - Log4JLogChute initialized using file 'velocity.log'
+2020-05-14 09:49:36,090 - Initializing Velocity, Calling init()...
+2020-05-14 09:49:36,090 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2020-05-14 09:49:36,090 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2020-05-14 09:49:36,090 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2020-05-14 09:49:36,090 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2020-05-14 09:49:36,090 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-05-14 09:49:36,090 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2020-05-14 09:49:36,093 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-14 09:49:36,100 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2020-05-14 09:49:36,101 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2020-05-14 09:49:36,101 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2020-05-14 09:49:36,102 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2020-05-14 09:49:36,102 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2020-05-14 09:49:36,103 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2020-05-14 09:49:36,103 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2020-05-14 09:49:36,104 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2020-05-14 09:49:36,105 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2020-05-14 09:49:36,105 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2020-05-14 09:49:36,159 - Created '20' parsers.
+2020-05-14 09:49:36,165 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2020-05-14 09:49:36,166 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2020-05-14 09:49:36,166 - Velocimacro : Default library not found.
+2020-05-14 09:49:36,166 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2020-05-14 09:49:36,166 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2020-05-14 09:49:36,166 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2020-05-14 09:49:36,166 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2020-05-14 09:49:36,181 - ResourceManager : found VOTemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-14 09:49:36,186 - ResourceManager : found MapperTemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-14 09:49:36,187 - ResourceManager : found VOForMybatisPlusTemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-05-14 09:49:36,187 - ResourceManager : found MapperClassForMybatisPlusTemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader

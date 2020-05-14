@@ -44,12 +44,13 @@ public class DbTableVOCodeGenerator {
 	public BeanInfo[] generate(String pkgName, String... tableNames) {
 
 		BeanInfo[] beanInfos = new BeanInfo[tableNames.length*3];
+		String xmlPkgName = pkgName+".xml";
 		String mapperPkgName = pkgName+".dao";
 		String entityPkgName = pkgName+".entity";
 		int indexCount = 0;
 		for (String tableName : tableNames) {
 //			beanInfos[indexCount++] = generateOneBean(entityPkgName, tableName);
-			beanInfos[indexCount++] = generateOneMapperBean(entityPkgName,mapperPkgName, tableName);
+			beanInfos[indexCount++] = generateOneMapperBean(entityPkgName,mapperPkgName,xmlPkgName, tableName);
 			beanInfos[indexCount++] = generateOneVoForMbp(entityPkgName, tableName);
 			beanInfos[indexCount++] = generateOneMapperClassForMbp(entityPkgName,mapperPkgName, tableName);
 		}
@@ -116,9 +117,9 @@ public class DbTableVOCodeGenerator {
 
 	
 	
-	private BeanInfo generateOneMapperBean(String entityPkgName,String mapperPkgName, String tableName) {
+	private BeanInfo generateOneMapperBean(String entityPkgName,String mapperPkgName,String xmlPkgName, String tableName) {
 		BeanInfo beanInfo = new BeanInfo();
-		beanInfo.setPkg(mapperPkgName);
+		beanInfo.setPkg(xmlPkgName);
 		String capitalize = NameUtils.capitalize(NameUtils.getJavaStyleName(tableName.toLowerCase()));
 		
 		beanInfo.setTableName(capitalize);
@@ -205,16 +206,21 @@ public class DbTableVOCodeGenerator {
 //				}
 
 				Field field = new Field();
+//				field.setName(NameUtils.getJavaStyleName(colName));
+//				field.setDesc(StringUtil.isNullOrBlank(remarks) ? "" : remarks);
+//				field.setUpperName(NameUtils.capitalize(field.getName()));
+//				field.setType(DataTypeUtils.getDataType(rs.getInt("DATA_TYPE")));
+
+					
 				field.setName(NameUtils.getJavaStyleName(colName));
 
 				field.setDesc(StringUtil.isNullOrBlank(remarks) ? "" : remarks);
 
 				field.setUpperName(NameUtils.capitalize(field.getName()));
-//				if (field.getName().equals("userId") || field.getName().indexOf("UserId") > 0) {
-//					field.setType("long");
-//				} else {
-					field.setType(DataTypeUtils.getDataType(rs.getInt("DATA_TYPE")));
-//				}
+				int dataType = rs.getInt("DATA_TYPE");
+				field.setType(DataTypeUtils.getDataType(dataType));
+				field.setJdbcType(JDBCType.valueOf(dataType).getName());
+				field.setColumName(colName);
 
 				fieldList.add(field);
 			}

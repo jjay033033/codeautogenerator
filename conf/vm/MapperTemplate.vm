@@ -2,10 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="${mapperPkg}.${tableName}Mapper" >
     <resultMap id="BaseResultMap" type="${entityPkg}.${tableName}Entity" >
-	    #foreach($field in $fields)
-			<result column="${field.getColumName()}" property="${field.getName()}" jdbcType="${field.getJdbcType()}" />
+		#foreach($field in $fields)<result column="${field.getColumName()}" property="${field.getName()}" jdbcType="${field.getJdbcType()}" />
 		#end
-    </resultMap>
+	
+	</resultMap>
     
     <sql id="Base_Column_List" >
     	#foreach($field in $fields)#if($!{foreach.index}>0),#end${field.getColumName()}#end
